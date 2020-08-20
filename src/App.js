@@ -53,7 +53,7 @@ function App() {
           <div className="date">Today: {dateBuilder(new Date())}</div>
 
           {forecast.list.map((item,index) =>{
-           if(index,5){
+           if(index<5){
             return(
                 <Weather temp={item.main.temp}
                   date={item.dt_txt}
