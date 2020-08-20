@@ -53,17 +53,16 @@ function App() {
           <div className="date">Today: {dateBuilder(new Date())}</div>
 
           {forecast.list.map((item,index) =>{
-           
+           if(index,5){
             return(
-              
-              <Weather temp={item.main.temp}
+                <Weather temp={item.main.temp}
                   date={item.dt_txt}
                   weathertype={item.weather[0].description}
                   humidity={item.main.humidity}
                   speed={item.wind.speed}
                   mintemp={item.main.temp_min}
-                  maxtemp={item.main.temp_max}/>
-            );
+                  maxtemp={item.main.temp_max}/>  
+            );}
           })}
         
         </div>
